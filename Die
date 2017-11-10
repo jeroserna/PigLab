@@ -1,0 +1,35 @@
+
+import java.util.Random;
+
+public class Die {
+
+ private int value;
+ 
+ public Die() { //Object with no parameters
+  value = 0;
+ }
+ 
+ public void roll() { 
+  Random r = new Random(); //Random numbers from 1-6 
+  value = r.nextInt(6) + 1;
+ }
+ 
+ public int getValue() { //Once value is obtained code (above) should be returned
+  return value;
+ }
+ 
+ 
+ public String toString() {
+  return ("Die Value: " + value);
+  
+ }
+ 
+ 
+ public static void main(String[] args) {
+  Die d = new Die(); //Object with empty parameters
+  d.roll();
+  String thedie = d.toString();
+  System.out.println(thedie); //Print result
+ }
+ 
+}
