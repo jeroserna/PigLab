@@ -1,0 +1,17 @@
+
+
+public class ComputerPlayer extends Player { //Computer player will be chosen if there is no player 2
+
+	public ComputerPlayer(String name, PairOfDice pod) {
+		super(name, pod);
+	}
+	
+	@Override
+	public boolean rollAgain() {
+		if(sk.getRoundTotal() < 20) { //to keep rolling if the score is less than player 1
+			return true;
+		}
+		return false;
+	}
+
+}
